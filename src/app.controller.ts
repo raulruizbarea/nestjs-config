@@ -7,6 +7,6 @@ export class AppController {
 
   @Get()
   getHelloEnvironment(): string {
-    return this.appService.getHelloEnvironment();
+    return `${this.appService.getHelloEnvironment()} - ${process.env.MESSAGE}`;
   }
 }
